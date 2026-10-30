@@ -178,7 +178,7 @@ function initActualAssistant() {
   const rootPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
   const whatsapp = document.createElement('a');
   whatsapp.className = 'whatsapp-float';
-  whatsapp.href = 'https://wa.me/250791893827';
+  whatsapp.href = 'https://wa.me/250785848534';
   whatsapp.target = '_blank';
   whatsapp.rel = 'noopener noreferrer';
   whatsapp.setAttribute('aria-label', 'Chat with ACTUAL HOLDINGS on WhatsApp');
