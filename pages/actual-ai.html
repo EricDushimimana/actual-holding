@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#064d38">
+<meta name="description" content="Actual AI — the intelligent assistant for ACTUAL HOLDINGS CO LTD and general questions.">
+<title>Actual AI | ACTUAL HOLDINGS CO LTD</title>
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="ai-ui">
+<div class="ai-shell">
+  <aside class="ai-sidebar" id="ai-sidebar" aria-label="Main navigation">
+    <a class="ai-brand" href="../index.html"><img alt="ACTUAL HOLDINGS logo" src="../images/actual-logo.jpeg"><span>Actual <b>AI</b><small>Your Smart Assistant</small></span></a>
+    <button class="ai-new-chat" id="ai-new-chat" type="button"><i class="fa-solid fa-plus"></i><span>New chat</span></button>
+    <nav class="ai-nav">
+      <a class="active" href="#chat-workspace"><i class="fa-solid fa-message"></i><span>Chat</span></a>
+      <a href="#suggested-questions"><i class="fa-regular fa-lightbulb"></i><span>Explore questions</span></a>
+      <a href="#company-knowledge"><i class="fa-regular fa-building"></i><span>Company knowledge</span></a>
+      <a href="../services.html"><i class="fa-solid fa-briefcase"></i><span>Our services</span></a>
+      <a href="../family.html"><i class="fa-solid fa-people-group"></i><span>ACTUAL Family</span></a>
+      <a href="trading.html"><i class="fa-solid fa-cart-shopping"></i><span>Products & shop</span></a>
+      <a href="../contact.html"><i class="fa-regular fa-envelope"></i><span>Contact us</span></a>
+    </nav>
+    <div class="ai-sidebar-note"><i class="fa-solid fa-shield-halved"></i><div><strong>Your information matters</strong><span>Do not share passwords or sensitive personal details in chat.</span></div></div>
+    <div class="ai-sidebar-user"><span class="profile-dot" id="ai-profile-initial">C</span><div><strong id="ai-profile-name">Client</strong><small>Signed-in user</small></div><button type="button" id="ai-logout" aria-label="Sign out" title="Sign out"><i class="fa-solid fa-arrow-right-from-bracket"></i></button></div>
+  </aside>
+  <main class="ai-main">
+    <header class="ai-topbar">
+      <button aria-label="Open navigation" class="ai-menu" id="ai-menu" type="button"><i class="fa-solid fa-bars"></i></button>
+      <div class="ai-top-brand"><img src="../images/actual-logo.jpeg" alt=""><span>Actual <b>AI</b><small>ACTUAL HOLDINGS CO LTD</small></span></div>
+      <label class="ai-search"><i class="fa-solid fa-magnifying-glass"></i><input id="ai-search-input" aria-label="Find a suggested question" placeholder="Search questions or company topics…"></label>
+      <div class="ai-top-status"><i class="fa-solid fa-bolt"></i> Smart assistant <span class="ai-status-dot"></span></div>
+    </header>
+    <div class="ai-page-grid">
+      <section class="ai-workspace" id="chat-workspace">
+        <section class="ai-welcome-card">
+          <div class="ai-welcome-copy"><span class="ai-eyebrow"><i class="fa-solid fa-sparkles"></i> YOUR INTELLIGENT ASSISTANT</span><h1>Ask. Explore. Get things done.</h1><p>Ask questions about ACTUAL HOLDINGS CO LTD, get help understanding a topic, draft content, explore ideas, or work through a problem.</p><div class="ai-capability-pills"><span><i class="fa-solid fa-building"></i> Company help</span><span><i class="fa-solid fa-globe"></i> General questions</span><span><i class="fa-solid fa-pen"></i> Writing & learning</span></div></div>
+          <div class="ai-logo-mark"><img src="../images/actual-logo.jpeg" alt="ACTUAL HOLDINGS brand mark"><span>Actual <b>AI</b></span><small>Your Smart Assistant</small></div>
+        </section>
+        <section class="ai-chat-card">
+          <div class="ai-chat-heading"><div class="ai-assistant-identity"><span class="ai-mini-logo"><i class="fa-solid fa-brain"></i></span><div><strong>Actual AI</strong><small><span class="ai-status-dot"></span> Ready to help</small></div></div><button class="ai-text-button" id="ai-clear-chat" type="button"><i class="fa-regular fa-trash-can"></i> Clear chat</button></div>
+          <div class="ai-conversation" id="ai-conversation" role="log" aria-live="polite" aria-relevant="additions text">
+            <article class="message assistant-message"><div class="robot-avatar small"><i class="fa-solid fa-brain"></i></div><div class="bubble"><p><strong>Hello! Welcome to Actual AI.</strong></p><p>I can help you explore ACTUAL HOLDINGS CO LTD and its services, or work with you on general questions, learning, writing, research, and coding.</p><p class="ai-disclaimer-inline"><i class="fa-solid fa-circle-info"></i> I’ll be clear when I’m unsure. Important facts should be verified with reliable sources.</p></div></article>
+          </div>
+          <div class="ai-suggestions" id="suggested-questions"><div class="ai-suggestions-heading"><i class="fa-solid fa-wand-magic-sparkles"></i><strong>What would you like to do?</strong><span>Choose a prompt or type your own</span></div><div class="ai-suggestion-grid">
+            <button type="button" data-prompt="Tell me about ACTUAL HOLDINGS CO LTD and the services it provides."><i class="fa-regular fa-building"></i><span><strong>Learn about our company</strong><small>Company profile and services</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" data-prompt="Explain RRA and Irembo services and how ACTUAL HOLDINGS may help me."><i class="fa-solid fa-file-invoice"></i><span><strong>RRA & Irembo guidance</strong><small>Understand processes and next steps</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" data-prompt="Help me understand a difficult topic step by step in simple English."><i class="fa-solid fa-graduation-cap"></i><span><strong>Learn something</strong><small>Simple, step-by-step explanations</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" data-prompt="Help me write a professional email. Ask me for the details you need."><i class="fa-regular fa-pen-to-square"></i><span><strong>Write & create</strong><small>Emails, ideas, and documents</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" data-prompt="Help me debug a coding problem. Tell me what information you need first."><i class="fa-solid fa-code"></i><span><strong>Programming help</strong><small>Code, debugging, and concepts</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" data-prompt="Research a question carefully and tell me what needs verification."><i class="fa-solid fa-magnifying-glass-chart"></i><span><strong>Research a question</strong><small>Reasoning and fact-checking guidance</small></span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+          </div></div>
+          <form class="ai-composer" id="ai-form"><label class="sr-only" for="ai-input">Your message</label><textarea autocomplete="off" id="ai-input" maxlength="5000" rows="1" placeholder="Ask anything — company services, a concept, a calculation, writing, or code…" aria-describedby="ai-composer-hint" required></textarea><button class="ai-send" aria-label="Send message" type="submit"><i class="fa-solid fa-arrow-up"></i></button><div class="ai-composer-foot"><span id="ai-composer-hint"><i class="fa-solid fa-lock"></i> Never enter passwords, verification codes, or API keys.</span><span id="ai-char-count">0 / 5000</span></div></form>
+        </section>
+        <div class="ai-bottom-note"><i class="fa-solid fa-circle-info"></i> Fast local preview: built-in knowledge and tools are active. A connected AI model will be added later for open-ended, high-level answers.</div>
+      </section>
+      <aside class="ai-right-column">
+        <section class="ai-company-card" id="company-knowledge"><div class="ai-company-banner"><span class="ai-company-icon"><i class="fa-regular fa-building"></i></span><div><span>COMPANY KNOWLEDGE</span><h2>ACTUAL HOLDINGS CO LTD</h2><p>One Company · Many Solutions</p></div></div><div class="ai-company-body"><p>Use Actual AI to explore the company’s services and find the appropriate next step. Answers about current prices, policies, availability, and official requirements should be confirmed with the company or relevant authority.</p><div class="ai-company-facts"><div><i class="fa-solid fa-location-dot"></i><span><small>Based in</small><strong>Kigali, Rwanda</strong></span></div><div><i class="fa-solid fa-layer-group"></i><span><small>Explore</small><strong>Services, products & family</strong></span></div></div><a href="../about.html" class="ai-company-link">About the company <i class="fa-solid fa-arrow-right"></i></a></div></section>
+        <section class="ai-side-card"><div class="ai-side-heading"><i class="fa-solid fa-compass"></i><h3>Explore ACTUAL</h3></div><a href="../services.html"><span class="ai-link-icon"><i class="fa-solid fa-briefcase"></i></span><span><strong>Our services</strong><small>Business and professional support</small></span><i class="fa-solid fa-chevron-right"></i></a><a href="../family.html"><span class="ai-link-icon yellow"><i class="fa-solid fa-people-group"></i></span><span><strong>ACTUAL Family</strong><small>Explore our business divisions</small></span><i class="fa-solid fa-chevron-right"></i></a><a href="trading.html"><span class="ai-link-icon"><i class="fa-solid fa-cart-shopping"></i></span><span><strong>Products & shop</strong><small>Explore ACTUAL Trading</small></span><i class="fa-solid fa-chevron-right"></i></a><a href="../contact.html"><span class="ai-link-icon yellow"><i class="fa-regular fa-envelope"></i></span><span><strong>Contact our team</strong><small>Ask for verified information</small></span><i class="fa-solid fa-chevron-right"></i></a></section>
+        <section class="ai-trust-card"><span><i class="fa-solid fa-shield-halved"></i></span><div><h3>Accuracy with transparency</h3><p>AI can make mistakes. Confirm important financial, legal, tax, health, or time-sensitive information with a qualified professional or official source.</p></div></section>
+      </aside>
+    </div>
+    <footer class="ai-footer"><span>© ACTUAL HOLDINGS CO LTD</span><span><i class="fa-solid fa-shield-halved"></i> Designed with privacy and clarity in mind</span><a href="../contact.html">Contact us</a></footer>
+  </main>
+</div>
+<script defer src="../js/script.js"></script>
+</body>
+</html>

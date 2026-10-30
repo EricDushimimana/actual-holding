@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#004c3a" name="theme-color"/><title>Owner Dashboard | ACTUAL HOLDINGS</title>
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head><body class="owner-ui">
+<div class="owner-shell">
+<aside class="owner-sidebar" id="owner-sidebar">
+<div class="owner-logo"><img alt="ACTUAL HOLDINGS" src="../images/actual-logo.jpeg"/><span>ACTUAL<small>HOLDINGS</small></span></div>
+<nav aria-label="Owner dashboard navigation" class="owner-nav">
+<div class="owner-nav-group"><span class="owner-nav-label">OVERVIEW</span>
+<button class="owner-nav-link active" data-view="dashboard" type="button"><i class="fa-solid fa-house"></i><span>Dashboard</span></button>
+</div>
+<div class="owner-nav-group"><span class="owner-nav-label">BUSINESS MANAGEMENT</span>
+<button class="owner-nav-link" data-view="clients" type="button"><i class="fa-solid fa-user-group"></i><span>Clients</span></button>
+<button class="owner-nav-link" data-view="employees" type="button"><i class="fa-solid fa-users-gear"></i><span>Employees</span></button>
+<button class="owner-nav-link" data-view="documents" type="button"><i class="fa-regular fa-file-lines"></i><span>Documents</span></button>
+</div>
+<div class="owner-nav-group"><span class="owner-nav-label">COMMERCE &amp; SERVICES</span>
+<button class="owner-nav-link" data-view="services" type="button"><i class="fa-solid fa-layer-group"></i><span>Services</span></button>
+<button class="owner-nav-link" data-view="shop" type="button"><i class="fa-solid fa-store"></i><span>Trading &amp; Inventory</span></button>
+<button class="owner-nav-link" data-view="finance" type="button"><i class="fa-solid fa-shield-dollar"></i><span>Finance &amp; Payments</span></button>
+</div>
+<div class="owner-nav-group"><span class="owner-nav-label">COMMUNICATION</span>
+<button class="owner-nav-link" data-view="messages" type="button"><i class="fa-regular fa-envelope"></i><span>Messages</span><b id="message-badge">0</b></button>
+<button class="owner-nav-link" data-view="notifications" type="button"><i class="fa-regular fa-bell"></i><span>Notifications</span><b id="notification-badge">0</b></button>
+</div>
+<div class="owner-nav-group"><span class="owner-nav-label">INSIGHTS &amp; CONTROL</span>
+<button class="owner-nav-link" data-view="reports" type="button"><i class="fa-solid fa-chart-column"></i><span>Reports</span></button>
+<button class="owner-nav-link" data-view="settings" type="button"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+</div>
+</nav>
+<div class="owner-sidebar-bottom"><div class="secure-card"><img alt="" src="../images/favicon.svg"/><div><strong>ACTUAL HOLDINGS</strong><small>Secure · Reliable · Professional</small></div><i class="fa-solid fa-lock"></i></div><p>© 2026 ACTUAL HOLDING<br/>All rights reserved.</p></div>
+</aside>
+<main class="owner-main">
+<header class="owner-topbar">
+<button aria-label="Open navigation" class="icon-control mobile-toggle" id="mobile-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+<button class="collapse-control" id="collapse-sidebar" type="button"><i class="fa-solid fa-angles-left"></i><span>Collapse Sidebar</span></button>
+<label class="global-search"><i class="fa-solid fa-magnifying-glass"></i><input id="global-search" placeholder="Search companies, TIN, client or services…" type="search"/></label>
+<div class="top-actions">
+<button aria-label="Notifications" class="icon-control" data-view="notifications" type="button"><i class="fa-regular fa-bell"></i><b id="top-notification-badge">0</b></button>
+<button aria-label="Messages" class="icon-control" data-view="messages" type="button"><i class="fa-regular fa-envelope"></i><b id="top-message-badge">0</b></button>
+<button aria-label="Settings" class="icon-control" data-view="settings" type="button"><i class="fa-solid fa-gear"></i></button>
+<div class="top-divider"></div><button class="owner-profile" id="profile-action" type="button"><span class="profile-initial" id="profile-initial">M</span><span><strong id="profile-name">MUGISHA J.D.</strong><small>Owner</small></span></button>
+</div>
+</header>
+<section class="owner-content">
+<section class="dashboard-view active" id="view-dashboard">
+<div class="welcome-row"><div class="welcome-card"><div><h1>Hello, <span id="welcome-name">Owner</span> <span class="wave">👋</span></h1><p>Here's what's happening with your business today.</p></div>
+<div class="date-card"><i class="fa-regular fa-calendar-days"></i><span id="today-label"></span></div></div>
+<div class="growth-card"><i class="fa-solid fa-chart-line"></i><div><strong>Growing Together</strong><span>Your success is our priority.</span></div></div></div>
+<div class="metric-grid">
+<article class="metric-card green"><span class="metric-icon"><i class="fa-solid fa-users"></i></span><div><small>Total Clients</small><h2 id="metric-clients">0</h2><p><span>From company records</span></p></div></article>
+<article class="metric-card amber"><span class="metric-icon"><i class="fa-solid fa-sack-dollar"></i></span><div><small>Total Revenue Received (RWF)</small><h2 id="metric-revenue">RWF 0</h2><p><span>Confirmed client receipts, service-request payments and paid shop orders</span></p></div></article>
+<article class="metric-card a-trading"><span class="metric-icon"><i class="fa-solid fa-store"></i></span><div><small>ACTUAL Trading Revenue (RWF)</small><h2 id="trading-revenue">RWF 0</h2><p><span>Confirmed paid shop orders only</span></p></div></article>
+<article class="metric-card outstanding"><span class="metric-icon"><i class="fa-solid fa-hourglass-half"></i></span><div><small>Outstanding Payments (RWF)</small><h2 id="metric-outstanding">RWF 0</h2><p><span>Unpaid monthly fees, service balances and shop orders</span></p></div></article></div>
+<section class="table-card">
+<div class="table-head"><div class="table-title"><span><i class="fa-solid fa-building-columns"></i></span><h2>Actual Client VAT Declarations<small>Monthly status grouped by quarter · words only</small></h2></div>
+<div class="table-tools"><select aria-label="Year" id="year-filter"><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option><option>2032</option><option>2033</option><option>2034</option><option>2035</option></select>
+<button class="tool-button" id="export-button" type="button"><i class="fa-solid fa-download"></i> Export</button>
+<button class="add-button" id="add-company" type="button"><i class="fa-solid fa-plus"></i> Add Company</button></div></div>
+<div class="table-scroll">
+<table class="finance-table">
+<thead>
+<tr>
+<th rowspan="2">No:</th>
+<th rowspan="2">TIN <i class="fa-solid fa-sort"></i></th>
+<th rowspan="2">Company Name <i class="fa-solid fa-sort"></i></th>
+<th rowspan="2">Phone No: <i class="fa-solid fa-sort"></i></th>
+<th colspan="3">Q1 (January–March)</th>
+<th colspan="3">Q2 (April–June)</th>
+<th colspan="3">Q3 (July–September)</th>
+<th colspan="3">Q4 (October–December)</th>
+<th rowspan="2">Annual VAT<br/>Declaration <i class="fa-solid fa-sort"></i></th>
+<th rowspan="2">Status</th>
+<th rowspan="2">Actions</th>
+</tr>
+<tr>
+<th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr>
+</thead>
+<tbody id="company-rows"></tbody>
+</table>
+</div>
+<div class="table-footer"><span id="table-summary"></span><div><button class="page-button" disabled="" type="button">Previous</button><button class="page-button active" type="button">1</button><button class="page-button" disabled="" type="button">Next <i class="fa-solid fa-arrow-right"></i></button></div></div>
+</section>
+<div class="quick-grid">
+<button class="quick-card" id="quick-add" type="button"><span class="quick-icon green"><i class="fa-solid fa-plus"></i></span><span><strong>Quick Actions</strong><small>Add new company, manage data, or generate reports.</small></span></button>
+<button class="quick-card" data-view="notifications" type="button"><span class="quick-icon mint"><i class="fa-regular fa-calendar-days"></i></span><span><strong>Compliance Reminder</strong><small id="reminder-copy">0 companies require compliance review this month.</small></span></button>
+<button class="quick-card" data-view="finance" type="button"><span class="quick-icon yellow"><i class="fa-solid fa-coins"></i></span><span><strong>Total Tax Due (Q1–Q4)</strong><b id="tax-due">RWF 0</b><small class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></small></span></button>
+<button class="quick-card" data-view="settings" type="button"><span class="quick-icon pale"><i class="fa-solid fa-shield-halved"></i></span><span><strong>System Status</strong><small class="system-good"><i class="fa-solid fa-circle"></i> All systems operational</small></span></button></div>
+</section>
+<section class="dashboard-view" id="view-clients">
+<div class="section-heading">
+<div><span>CLIENT MANAGEMENT</span><h1>Clients</h1><p>Search, manage, and update company records from one place.</p></div>
+<button class="add-button section-add" type="button"><i class="fa-solid fa-plus"></i> Add Company</button></div>
+<div class="section-panel" id="clients-panel"></div>
+</section>
+<section class="dashboard-view" id="view-services">
+<div class="section-heading"><span>SERVICE CATALOG</span><h1>Services</h1><p>Manage the services displayed to ACTUAL HOLDINGS clients.</p></div><div class="empty-section"><i class="fa-solid fa-layer-group"></i><h2>Services workspace</h2><p>This frontend workspace is ready for your service catalogue.</p></div>
+</section>
+<section class="dashboard-view" id="view-shop">
+<div class="section-heading"><span>ACTUAL TRADING</span><h1>Shop</h1><p>Manage product listings, availability, and orders.</p></div><div class="empty-section"><i class="fa-solid fa-cart-shopping"></i><h2>Shop workspace</h2><p>Products and orders will appear here.</p></div>
+</section>
+<section class="dashboard-view" id="view-finance">
+<div class="section-heading"><span>FINANCIAL CONTROL</span><h1>Finance &amp; Payments</h1><p>Review revenue, tax due, and payment status.</p></div><div class="section-panel" id="finance-panel"></div></section>
+<section class="dashboard-view" id="view-employees">
+<div class="section-heading"><span>PEOPLE OPERATIONS</span><h1>Employees</h1><p>Manage your ACTUAL HOLDINGS team.</p></div><div class="empty-section"><i class="fa-solid fa-users-gear"></i><h2>Employee workspace</h2><p>Employee management can be connected here next.</p></div>
+</section>
+<section class="dashboard-view" id="view-documents">
+<div class="section-heading"><span>DOCUMENT CONTROL</span><h1>Documents</h1><p>Review company documents and submissions.</p></div><div class="empty-section"><i class="fa-regular fa-file-lines"></i><h2>Document workspace</h2><p>Secure document records will appear here.</p></div>
+</section>
+<section class="dashboard-view" id="view-messages">
+<div class="section-heading"><div><span>COMMUNICATION CENTRE</span><h1>Messages</h1><p>One inbox for conversations with clients, administrators and employees.</p></div><span class="live-status"><i></i> Live updates</span></div>
+<div class="message-workspace">
+ <aside class="message-inbox"><div class="message-inbox-head"><div><h2>Inbox</h2><small id="message-inbox-count">0 conversations</small></div><button type="button" class="tool-button" id="message-compose-new"><i class="fa-solid fa-pen"></i> New message</button></div>
+ <label class="message-search"><i class="fa-solid fa-magnifying-glass"></i><input id="message-search" type="search" placeholder="Search conversations"></label>
+ <div class="message-filter-row"><button type="button" class="is-active" data-message-filter="all">All</button><button type="button" data-message-filter="unread">Unread</button><button type="button" data-message-filter="sent">Sent</button></div>
+ <div id="message-conversation-list" class="message-conversation-list"><div class="message-empty-small">Your conversations will appear here.</div></div></aside>
+ <section class="message-thread" aria-live="polite"><div id="message-thread-content" class="message-thread-empty"><i class="fa-regular fa-comments"></i><h2>Select a conversation</h2><p>Choose a conversation or start a new message.</p><button type="button" class="add-button" id="message-start-first">Compose message</button></div>
+ <form id="message-reply-form" class="message-reply-form" hidden><textarea id="message-reply-text" rows="2" maxlength="4000" placeholder="Write your reply..." required></textarea><button class="add-button" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button></form></section>
+</div>
+<dialog id="message-compose-dialog" class="owner-dialog"><form id="message-compose-form"><div class="dialog-header"><div><span>NEW CONVERSATION</span><h2>Compose message</h2></div><button type="button" class="dialog-close" data-owner-dialog-close="message-compose-dialog" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+<div class="owner-form-grid"><label>Recipient role<select id="message-recipient-role" required><option value="client">Client</option><option value="admin">Admin</option><option value="employee">Employee</option></select></label><label>Recipient name<input id="message-recipient-name" required maxlength="120" placeholder="Enter recipient name"></label><label class="owner-form-full">Subject<input id="message-subject" required maxlength="160" placeholder="Message subject"></label><label class="owner-form-full">Message<textarea id="message-body" rows="5" required maxlength="4000" placeholder="Write your message..."></textarea></label></div><p id="message-compose-status" class="owner-form-status" role="status"></p><div class="dialog-actions"><button type="button" class="tool-button" data-owner-dialog-close="message-compose-dialog">Cancel</button><button type="submit" class="add-button"><i class="fa-solid fa-paper-plane"></i> Send message</button></div></form></dialog>
+</section>
+<section class="dashboard-view" id="view-notifications">
+<div class="section-heading"><div><span>ACTIVITY &amp; ALERTS</span><h1>Notifications</h1><p>Live alerts from clients, payments, services, Trading and system activity.</p></div><span class="live-status"><i></i> Live updates</span></div>
+<div class="notification-toolbar"><div class="notification-counts"><strong id="notification-unread-total">0 unread</strong><small id="notification-total">0 total notifications</small></div><div class="notification-actions"><select id="notification-filter" aria-label="Filter notifications"><option value="all">All notifications</option><option value="unread">Unread</option><option value="payments">Payments</option><option value="services">Services</option><option value="trading">Trading</option><option value="messages">Messages</option><option value="system">System &amp; compliance</option></select><button type="button" class="tool-button" id="notification-mark-all"><i class="fa-solid fa-check-double"></i> Mark all read</button></div></div>
+<div class="notification-list" id="notifications-panel"><div class="notice-empty">You are all caught up.</div></div>
+</section>
+<section class="dashboard-view" id="view-reports">
+<div class="section-heading"><span>BUSINESS INSIGHTS</span><h1>Reports</h1><p>Export and review operational data.</p></div><div class="empty-section"><i class="fa-solid fa-chart-column"></i><h2>Reports workspace</h2><p>Use Export on the dashboard to download the company overview as CSV.</p></div>
+</section>
+<section class="dashboard-view" id="view-settings">
+<div class="section-heading"><div><span>OWNER CONTROL CENTRE</span><h1>Settings</h1><p>Manage company-wide preferences and define what administrators may control.</p></div><span class="settings-owner-chip"><i class="fa-solid fa-shield-halved"></i> Owner access</span></div>
+<form id="owner-settings-form" class="owner-settings-layout">
+ <section class="settings-card owner-profile-settings-card"><div class="settings-card-heading"><span class="settings-icon"><i class="fa-solid fa-user"></i></span><div><h2>Owner profile</h2><p>Update the profile photo shown across the Owner Dashboard.</p></div></div><div class="owner-profile-upload-row"><div class="owner-profile-preview" id="owner-profile-avatar" aria-label="Owner profile photo">M</div><div class="owner-profile-upload-copy"><strong>MUGISHA J.D.</strong><small>Owner account · ACTUAL HOLDINGS</small><label class="add-button owner-photo-upload-label" for="owner-profile-photo-input"><i class="fa-solid fa-camera"></i> Upload profile photo<input id="owner-profile-photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden></label><small>JPG, PNG or WebP · Maximum 5 MB. Your photo is saved in this browser in this frontend phase.</small><p id="owner-profile-photo-status" class="owner-form-status" role="status" aria-live="polite"></p></div></div></section>
+ <section class="settings-card"><div class="settings-card-heading"><span class="settings-icon"><i class="fa-solid fa-building"></i></span><div><h2>Business information</h2><p>Company details used across the platform.</p></div></div><div class="owner-form-grid"><label>Business name<input id="setting-business-name" maxlength="120" value="ACTUAL HOLDINGS"></label><label>Business email<input id="setting-business-email" type="email" maxlength="160" placeholder="info@example.com"></label><label>Business phone<input id="setting-business-phone" maxlength="40" placeholder="+250 ..."></label><label>Website<input id="setting-business-website" type="url" maxlength="180" placeholder="https://example.com"></label></div></section>
+ <section class="settings-card"><div class="settings-card-heading"><span class="settings-icon"><i class="fa-regular fa-bell"></i></span><div><h2>Notification preferences</h2><p>Choose which in-app alerts should be highlighted for the Owner.</p></div></div><div class="settings-toggle-list"><label><span><strong>Payment alerts</strong><small>New receipts, failed payments and outstanding balances.</small></span><input type="checkbox" id="setting-notify-payments" checked></label><label><span><strong>Service alerts</strong><small>New requests, assignments, deadlines and completion.</small></span><input type="checkbox" id="setting-notify-services" checked></label><label><span><strong>Trading alerts</strong><small>New orders, stock changes and low-stock warnings.</small></span><input type="checkbox" id="setting-notify-trading" checked></label><label><span><strong>Message alerts</strong><small>New incoming conversations and replies.</small></span><input type="checkbox" id="setting-notify-messages" checked></label><label><span><strong>System and compliance alerts</strong><small>Security, account and declaration reminders.</small></span><input type="checkbox" id="setting-notify-system" checked></label></div></section>
+ <section class="settings-card"><div class="settings-card-heading"><span class="settings-icon"><i class="fa-solid fa-user-shield"></i></span><div><h2>Role and access policy</h2><p>Shared settings model: Owner controls global policy; Admin controls day-to-day operations.</p></div></div><div class="permission-summary"><article><span class="permission-role owner-role">OWNER</span><strong>System-wide authority</strong><p>Business profile, security policy, role permissions, integrations, global notification rules and system controls.</p></article><article><span class="permission-role admin-role">ADMIN</span><strong>Operational preferences</strong><p>Assigned client and service workflows, work queues, communication preferences and permitted record updates. No access to Owner-only system controls.</p></article></div><p class="settings-security-note"><i class="fa-solid fa-circle-info"></i> These are frontend settings and a permission design preview. Server-side role enforcement, account security and audit logging will be implemented during backend integration.</p></section>
+ <p id="owner-settings-status" class="owner-form-status" role="status"></p><div class="settings-form-actions"><button type="submit" class="add-button"><i class="fa-solid fa-floppy-disk"></i> Save settings</button><button type="button" class="tool-button" id="owner-settings-reset">Reset unsaved changes</button></div>
+</form>
+<div class="settings-danger-zone"><div><strong>Demo data management</strong><small>Clearing company records is destructive. Export or download a backup first.</small></div><button class="danger-button" id="clear-demo" type="button">Clear demo companies</button></div>
+</section>
+</section>
+</main>
+</div>
+<dialog class="company-dialog" id="company-dialog">
+<form id="company-form" method="dialog">
+<div class="dialog-header">
+<div><span id="dialog-eyebrow">COMPANY RECORD</span><h2 id="dialog-title">Add Company</h2></div>
+<button class="dialog-close" data-close-dialog="" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+<input id="company-id" type="hidden"/>
+<div class="form-grid"><label>Company name<input id="company-name" maxlength="100" placeholder="Company name" required=""/></label>
+<label>TIN<input id="company-tin" maxlength="30" placeholder="e.g. 103456789" required=""/></label>
+<label>Phone Number<input id="company-phone" maxlength="20" placeholder="e.g. +250 78... " required=""/></label>
+<label>Email address<input id="company-email" maxlength="120" placeholder="client@example.com" type="email"/></label>
+<label>Contact person<input id="company-contact-person" maxlength="100" placeholder="Owner or finance contact"/></label>
+<label>Physical address<input id="company-address" maxlength="180" placeholder="District, sector, street"/></label>
+<label>Service provided<input id="company-service" maxlength="120" placeholder="Accounting, VAT declaration, etc."/></label>
+<label>Monthly service fee for selected year (RWF)<input id="company-monthly-fee" min="0" placeholder="0" required="" step="100" type="number" value="0"/></label>
+<label>Annual company turnover for selected year (RWF)<input id="company-revenue" min="0" placeholder="0" required="" step="1000" type="number"/></label>
+<label>Other confirmed service receipts excluding monthly fees (RWF)<input id="company-service-receipts" min="0" placeholder="0" required="" step="1" type="number" value="0"/></label>
+<label>Other outstanding balance excluding monthly fees (RWF)<input id="company-outstanding" min="0" placeholder="0" required="" step="1" type="number" value="0"/></label>
+<label>Annual VAT declaration<select id="company-declaration">
+<option value="Declared">Declared</option>
+<option value="Pending">Pending</option>
+<option value="Not Declared">Not Declared</option>
+</select>
+</label>
+<label>Status<select id="company-status">
+<option value="Compliant">Compliant</option>
+<option value="Review">Review</option>
+<option value="Overdue">Overdue</option>
+</select>
+</label>
+</div>
+<fieldset class="quarter-status-fields"><legend>Quarterly VAT declaration status · <span id="quarterly-year-label">selected year</span></legend><p class="field-help">Choose a text status for each quarter. Monthly declaration statuses can be edited directly in the dashboard table.</p>
+<label>Q1 · Jan–Mar<select id="quarter-q1"><option>Not recorded</option><option>Declared</option><option>Pending</option><option>Not Declared</option></select></label>
+<label>Q2 · Apr–Jun<select id="quarter-q2"><option>Not recorded</option><option>Declared</option><option>Pending</option><option>Not Declared</option></select></label>
+<label>Q3 · Jul–Sep<select id="quarter-q3"><option>Not recorded</option><option>Declared</option><option>Pending</option><option>Not Declared</option></select></label>
+<label>Q4 · Oct–Dec<select id="quarter-q4"><option>Not recorded</option><option>Declared</option><option>Pending</option><option>Not Declared</option></select></label>
+</fieldset>
+<div class="dialog-actions">
+<button class="tool-button" data-close-dialog="" type="button">Cancel</button>
+<button class="add-button" type="submit" value="default"><i class="fa-solid fa-floppy-disk"></i> Save Client</button>
+</div>
+</form>
+</dialog>
+<dialog class="confirm-dialog" id="confirm-dialog">
+<div><span class="danger-icon"><i class="fa-solid fa-trash"></i></span><h2>Delete this company?</h2><div>
+<button class="tool-button" id="cancel-delete" type="button">Cancel</button>
+<button class="danger-button" id="confirm-delete" type="button">Delete Company</button>
+</div>
+</div>
+</dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script defer="" src="../js/script.js"></script>
+</body>
+</html>

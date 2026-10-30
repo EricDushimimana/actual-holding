@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex,nofollow,noarchive" name="robots"/>
+<meta content="#123c32" name="theme-color"/>
+<title>Client Portal | ACTUAL HOLDINGS</title>
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="client-app">
+<div class="portal-shell">
+<aside aria-label="Client portal navigation" class="portal-sidebar" id="portal-sidebar">
+<div class="brand-block">
+<a aria-label="ACTUAL HOLDINGS public website" class="brand-mark" href="../index.html">
+<img alt="" src="../images/favicon.svg"/>
+<span><strong>ACTUAL</strong><small>HOLDINGS</small></span>
+</a>
+<button aria-label="Close navigation" class="icon-btn sidebar-close" id="sidebar-close" type="button">×</button>
+</div>
+<div class="portal-user-mini">
+<div class="avatar avatar-sm" id="sidebar-avatar">A</div>
+<div><strong id="sidebar-name">Client</strong><span>Client Account</span></div>
+</div>
+<nav class="portal-nav">
+<button class="nav-item active" data-section="dashboard" type="button"><span>⌂</span> Dashboard</button>
+<button class="nav-item" data-section="services" type="button"><span>◫</span> My Services</button>
+<button class="nav-item" data-section="orders" type="button"><span>▣</span> My Orders</button>
+<button class="nav-item" data-section="payments" type="button"><span>₣</span> Payments</button>
+<button class="nav-item" data-section="documents" type="button"><span>□</span> Documents</button>
+<button class="nav-item" data-section="messages" type="button"><span>✉</span> Messages <b class="nav-count" id="message-count">0</b></button>
+<button class="nav-item" data-section="notifications" type="button"><span>◉</span> Notifications <b class="nav-count" id="notification-count">0</b></button>
+<button class="nav-item" data-section="ai" type="button"><span>✦</span> ACTUAL AI</button>
+<button class="nav-item" data-section="profile" type="button"><span>◎</span> Profile</button>
+<button class="nav-item" data-section="settings" type="button"><span>⚙</span> Settings</button>
+<button class="nav-item" data-section="activity" type="button"><span>•</span> Activity</button>
+</nav>
+<div class="sidebar-bottom">
+<a class="nav-item link-item" href="trading.html"><span>▣</span> ACTUAL Trading</a>
+<a class="nav-item link-item" href="../family.html"><span>◇</span> ACTUAL Family</a>
+<a class="nav-item link-item" href="../help.html"><span>?</span> Help Center</a>
+<a class="nav-item link-item" href="../index.html"><span>↗</span> Public Site</a>
+<button class="nav-item danger" id="logout-btn" type="button"><span>⇥</span> Logout</button>
+</div>
+</aside>
+<div class="portal-backdrop" id="portal-backdrop"></div>
+<main class="portal-main">
+<header class="portal-topbar ah-app-header">
+<button aria-label="Open navigation" class="ah-menu mobile-menu" id="mobile-menu" type="button">☰</button>
+<div class="ah-breadcrumb"><span class="ah-brand">ACTUAL HOLDINGS</span><b class="ah-slash">/</b><strong class="ah-current" id="breadcrumb-current">Dashboard</strong></div>
+<div class="ah-header-spacer"></div>
+<button aria-label="Search" class="ah-command" id="client-global-search" type="button"><span class="ah-search-icon">⌕</span><span class="ah-command-text">Search your services and documents</span><kbd>Ctrl K</kbd></button>
+<button aria-label="Notifications" class="ah-action" data-section="notifications" type="button"><span>♧</span><b class="ah-badge" id="top-notification-count">0</b></button>
+<span class="ah-divider"></span>
+<button class="ah-profile" data-section="profile" type="button"><span class="ah-avatar" id="top-avatar">C</span><span class="ah-profile-copy"><strong id="top-name">Client</strong><small>Client account</small></span><span class="ah-chevron">⌄</span></button>
+<span class="ah-role">CLIENT</span>
+<button aria-label="Logout" class="ah-action top-logout" id="top-logout-btn" type="button">⇥</button>
+</header>
+<div class="portal-content">
+<div aria-live="polite" class="flash" id="flash" role="status"></div>
+<section class="portal-section active" id="section-dashboard">
+<div class="hero-card">
+<div>
+<span class="eyebrow">SECURE CLIENT PORTAL</span>
+<h1>Hello, <span id="hero-name">Client</span></h1>
+<p>Manage your ACTUAL HOLDINGS services, orders, payments, documents and support from one secure account.</p>
+<div class="hero-actions"><button class="btn btn-primary" data-section="services" type="button">Request Service</button><button class="btn btn-light" data-section="messages" type="button">Contact Support</button></div>
+</div>
+<div class="hero-shield">✓<small>Your account is protected</small></div>
+</div>
+<div class="stat-grid">
+<article class="stat-card"><span class="stat-icon">◫</span><div><small>ACTIVE SERVICES</small><strong id="stat-services">0</strong></div></article>
+<article class="stat-card"><span class="stat-icon gold">▣</span><div><small>ORDERS</small><strong id="stat-orders">0</strong></div></article>
+<article class="stat-card"><span class="stat-icon dark">₣</span><div><small>PENDING PAYMENTS</small><strong id="stat-payments">0</strong></div></article>
+<article class="stat-card"><span class="stat-icon message">✉</span><div><small>MESSAGES</small><strong id="stat-messages">0</strong></div></article>
+</div>
+<div class="two-col">
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">ATTENTION</span><h2>Action Required</h2></div><button class="text-btn" data-section="services" type="button">View services →</button></div><div class="empty-state" id="action-required">Loading...</div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">ACCOUNT HISTORY</span><h2>Recent Activity</h2></div><button class="text-btn" data-section="activity" type="button">View all →</button></div><div class="timeline-list" id="recent-activity">Loading...</div></article>
+</div>
+<div class="quick-grid">
+<article class="panel quick-card"><span class="quick-icon">＋</span><div><strong>Request a Service</strong><p>Choose an ACTUAL FAMILY service and submit your request.</p></div><button class="small-btn" data-section="services" type="button">Start</button></article>
+<article class="panel quick-card"><span class="quick-icon">▣</span><div><strong>Check Orders</strong><p>Review your shop orders and payment status.</p></div><button class="small-btn" data-section="orders" type="button">Open</button></article>
+<article class="panel quick-card"><span class="quick-icon">□</span><div><strong>My Documents</strong><p>Access files connected to your services and requests.</p></div><button class="small-btn" data-section="documents" type="button">Open</button></article>
+<article class="panel quick-card"><span class="quick-icon">?</span><div><strong>Help Center</strong><p>Find guidance or contact ACTUAL HOLDINGS support.</p></div><a class="small-btn" href="../help.html">Help</a></article>
+</div>
+<div class="two-col account-health-grid">
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">ACCOUNT HEALTH</span><h2>Your account</h2></div><button class="text-btn" data-section="profile" type="button">Manage profile →</button></div><div class="health-progress"><div><strong id="profile-completeness">0%</strong><span>Profile completeness</span></div><div class="progress-track"><i id="profile-progress"></i></div></div><div class="security-list"><div><span>Account status</span><strong id="dashboard-account-status">Checking…</strong></div><div><span>Role</span><strong>Client</strong></div><div><span>Privacy</span><strong>Server-side protected</strong></div></div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">SHORTCUTS</span><h2>ACTUAL HOLDINGS</h2></div></div><div class="shortcut-list"><a href="trading.html"><span>ACTUAL Trading</span><small>Browse products</small>→</a><a href="../family.html"><span>ACTUAL Family</span><small>Explore divisions</small>→</a><a href="../contact.html"><span>Contact</span><small>Send a general inquiry</small>→</a><a href="../help.html"><span>Help</span><small>Guides and support</small>→</a></div></article>
+</div>
+<section class="family-section"><div class="section-heading"><div><span class="eyebrow">ACTUAL FAMILY</span><h2>Services across the ACTUAL ecosystem</h2></div><a href="../family.html">Explore family →</a></div><div class="family-grid">
+<button class="family-card" data-family="ACTUAL ACCOUNTING" data-section="services" type="button"><span>01</span><h3>ACTUAL ACCOUNTING</h3><p>Tax, bookkeeping, compliance and business support.</p></button>
+<button class="family-card" data-family="ACTUAL DESIGN" data-section="services" type="button"><span>02</span><h3>ACTUAL DESIGN</h3><p>Brand identity, graphics, UI/UX and creative design.</p></button>
+<button class="family-card" data-family="ACTUAL PHOTOGRAPHY" data-section="services" type="button"><span>03</span><h3>ACTUAL PHOTOGRAPHY</h3><p>Events, portraits, product and corporate photography.</p></button>
+<button class="family-card" data-family="ACTUAL MUSIC" data-section="services" type="button"><span>04</span><h3>ACTUAL MUSIC</h3><p>Recording, production, mixing and mastering.</p></button>
+</div></section>
+</section>
+<section class="portal-section" id="section-services">
+<div class="section-heading"><div><span class="eyebrow">SERVICES</span><h2>My Services</h2><p>Request a service and track its progress from submission to completion.</p></div><button class="btn btn-primary" id="open-service-form" type="button">+ Request New Service</button></div>
+<div class="service-tools">
+<div class="filter-row" id="service-filters"><button class="filter active" data-status="all" type="button">All</button><button class="filter" data-status="pending" type="button">Pending</button><button class="filter" data-status="under_review" type="button">Under Review</button><button class="filter" data-status="processing" type="button">Processing</button><button class="filter" data-status="action_required" type="button">Action Required</button><button class="filter" data-status="completed" type="button">Completed</button></div>
+<div class="service-search"><input aria-label="Search your services" id="service-search" placeholder="Search your services…" type="search"/><select aria-label="Filter service catalog by family" id="family-filter"><option value="all">All ACTUAL FAMILY</option></select></div>
+</div>
+<div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Reference</th><th>Service</th><th>Family</th><th>Status</th><th>Updated</th><th></th></tr></thead><tbody id="services-table"><tr><td class="loading-cell" colspan="6">Loading...</td></tr></tbody></table></div></div>
+<div class="catalog-block"><div class="section-heading"><div><span class="eyebrow">ACTUAL FAMILY CATALOG</span><h3>Discover services</h3><p>Browse available services before opening a request.</p></div></div><div class="catalog-grid" id="service-catalog-grid"><div class="empty-state">Loading catalog…</div></div></div>
+</section>
+<section class="portal-section" id="section-orders"><div class="section-heading"><div><span class="eyebrow">ACTUAL TRADING</span><h2>My Orders</h2><p>View your ACTUAL TRADING orders and payment state.</p></div></div><div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Order</th><th>Total</th><th>Status</th><th>Payment</th><th>Date</th><th></th></tr></thead><tbody id="orders-table"><tr><td class="loading-cell" colspan="6">Loading...</td></tr></tbody></table></div></div></section>
+<section class="portal-section" id="section-payments"><div class="section-heading"><div><span class="eyebrow">FINANCE</span><h2>Payments</h2><p>Track service and shop payment records associated with your account.</p></div></div><div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Reference</th><th>Amount</th><th>Method</th><th>Status</th><th>Date</th></tr></thead><tbody id="payments-table"><tr><td class="loading-cell" colspan="5">Loading...</td></tr></tbody></table></div></div></section>
+<section class="portal-section" id="section-documents"><div class="section-heading"><div><span class="eyebrow">DOCUMENTS</span><h2>My Documents</h2><p>Upload and access documents associated with your services.</p></div><label class="btn btn-primary file-btn">+ Upload Documents<input accept="application/pdf,image/jpeg,image/png,.xlsx" id="document-upload" multiple="" type="file"/></label></div><div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Document</th><th>Type</th><th>Status</th><th>Processed</th><th>Uploaded</th><th></th></tr></thead><tbody id="documents-table"><tr><td class="loading-cell" colspan="6">Loading...</td></tr></tbody></table></div></div></section>
+<section class="portal-section" id="section-messages"><div class="section-heading"><div><span class="eyebrow">SUPPORT</span><h2>Messages</h2><p>Communicate with ACTUAL HOLDINGS staff about your account and services.</p></div></div><div class="message-layout"><div class="panel message-info"><span class="message-icon">✉</span><h3>ACTUAL HOLDINGS Support</h3><label>Send to <select id="message-staff"><option value="">Loading support…</option></select></label><p>Your messages are associated with your client account and are visible to authorized staff only.</p></div><div class="panel chat-panel"><div class="messages-list" id="messages-list">Loading...</div><form class="message-form" id="message-form"><input id="message-input" maxlength="2000" placeholder="Write a message..." required=""/><button class="btn btn-primary" type="submit">Send</button></form></div></div></section>
+<section class="portal-section" id="section-notifications"><div class="section-heading"><div><span class="eyebrow">UPDATES</span><h2>Notifications</h2><p>Important service, order, payment and account updates.</p></div><button class="btn btn-light" id="mark-all-read" type="button">Mark all as read</button></div><div class="notification-grid" id="notifications-list">Loading...</div></section>
+<section class="portal-section" id="section-ai"><div class="ai-card"><span class="ai-mark">✦</span><span class="eyebrow">ACTUAL AI</span><h2>Your ACTUAL assistant</h2><p>ACTUAL AI is protected behind the server and is designed to answer authorized account questions and route requests across ACTUAL FAMILY divisions.</p><div class="ai-example-grid"><div><strong>Ask a question</strong><span>“I need help with a tax declaration.”</span></div><div><strong>Get the right route</strong><span>ACTUAL ACCOUNTING</span></div><div><strong>Stay protected</strong><span>Server-side authorization keeps private data private.</span></div></div><div class="notice">AI credentials remain server-side. The client never receives provider credentials or direct provider access.</div></div></section>
+<section class="portal-section" id="section-profile"><div class="section-heading"><div><span class="eyebrow">ACCOUNT</span><h2>Profile</h2><p>Manage your own account information. Your role remains controlled by the system.</p></div></div><div class="profile-grid"><div class="panel profile-photo-panel"><div class="avatar avatar-lg" id="profile-avatar">A</div><label class="btn btn-light file-btn">Change photo<input accept="image/jpeg,image/png,image/webp" id="profile-photo-input" type="file"/></label><small>JPG, PNG or WebP. Maximum 5 MB.</small><p id="profile-photo-status" class="profile-photo-status" role="status" aria-live="polite"></p><div class="account-meta"><span>Role <strong id="profile-role">Client</strong></span><span>Status <strong id="profile-status">Active</strong></span><span>Member since <strong id="profile-created">—</strong></span></div></div><form class="panel form-panel" id="profile-form"><h3>Personal information</h3><label>Full name<input id="profile-name" maxlength="120" required=""/></label><label>Company<input id="profile-company" maxlength="150" required=""/></label><label>Email<input id="profile-email" maxlength="150" required="" type="email"/></label><label>Phone<input id="profile-phone" maxlength="40"/></label><label>Address<textarea id="profile-address" maxlength="255" rows="3"></textarea></label><label>Tax Identification Number<input id="profile-tin" readonly=""/></label><button class="btn btn-primary" type="submit">Save Profile</button></form></div></section>
+<section class="portal-section" id="section-settings"><div class="section-heading"><div><span class="eyebrow">PREFERENCES</span><h2>Settings</h2><p>Control the notifications you receive and secure your password.</p></div></div><div class="settings-grid"><form class="panel form-panel" id="preferences-form"><h3>Notification preferences</h3><label class="switch-row"><span>Service updates<small>Changes to your service requests.</small></span><input data-pref="service_updates" type="checkbox"/></label><label class="switch-row"><span>Payment alerts<small>Payment status and verification updates.</small></span><input data-pref="payment_alerts" type="checkbox"/></label><label class="switch-row"><span>Order updates<small>Shop order status changes.</small></span><input data-pref="order_updates" type="checkbox"/></label><label class="switch-row"><span>Messages<small>New support messages.</small></span><input data-pref="messages" type="checkbox"/></label><label class="switch-row"><span>Document updates<small>Document processing updates.</small></span><input data-pref="document_updates" type="checkbox"/></label><label class="switch-row"><span>Marketing<small>Optional announcements and offers.</small></span><input data-pref="marketing" type="checkbox"/></label><button class="btn btn-primary" type="submit">Save Preferences</button></form><form class="panel form-panel" id="password-form"><h3>Change password</h3><label>Current password<input autocomplete="current-password" id="current-password" required="" type="password"/></label><label>New password<input autocomplete="new-password" id="new-password" minlength="12" required="" type="password"/><small>At least 12 characters with letters and numbers.</small></label><label>Confirm new password<input autocomplete="new-password" id="confirm-password" minlength="12" required="" type="password"/></label><button class="btn btn-primary" type="submit">Change Password</button></form></div></section>
+<section class="portal-section" id="section-activity"><div class="section-heading"><div><span class="eyebrow">SECURITY &amp; HISTORY</span><h2>Activity</h2><p>Recent activity recorded for your account.</p></div></div><div class="panel"><div class="activity-full-list" id="activity-list">Loading...</div></div></section>
+</div>
+</main>
+</div>
+<dialog class="portal-dialog" id="service-dialog">
+<form class="dialog-card" id="service-form" method="dialog">
+<div class="dialog-head"><div><span class="eyebrow">NEW REQUEST</span><h2>Request a Service</h2></div><button aria-label="Close" class="icon-btn" type="submit" value="cancel">×</button></div>
+<label>Service<select id="service-select" required=""><option value="">Loading services...</option></select></label>
+<div class="service-preview" id="service-preview">Choose a service to see its description.</div>
+<label>Request title<input id="service-title" maxlength="180" placeholder="Example: Monthly bookkeeping support" required=""/></label>
+<label>Details<textarea id="service-description" maxlength="5000" placeholder="Explain what you need..." required="" rows="6"></textarea></label><div class="dynamic-service-fields" id="dynamic-service-fields"></div><label>Supporting files <input accept=".pdf,.jpg,.jpeg,.png,.xlsx" id="service-files" multiple="" type="file"/></label><small>Files are securely linked to this service request.</small>
+<div class="dialog-actions"><button class="btn btn-light" type="submit" value="cancel">Cancel</button><button class="btn btn-primary" id="submit-service" type="submit" value="default">Submit Request</button></div>
+</form>
+</dialog>
+<dialog class="portal-dialog" id="service-detail-dialog"><div class="dialog-card"><div class="dialog-head"><div><span class="eyebrow">SERVICE DETAIL</span><h2 id="detail-title">Service</h2></div><button class="icon-btn" id="close-detail" type="button">×</button></div><div id="service-detail-content">Loading...</div></div></dialog>
+<dialog class="portal-dialog" id="order-detail-dialog"><div class="dialog-card"><div class="dialog-head"><div><span class="eyebrow">ORDER DETAIL</span><h2 id="order-detail-title">Order</h2></div><button class="icon-btn" id="close-order-detail" type="button">×</button></div><div id="order-detail-content">Loading...</div></div></dialog>
+<script defer="" src="../js/script.js"></script>
+</body>
+</html>
